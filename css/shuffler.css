@@ -1,0 +1,39 @@
+/* reset */
+body, ul, li, p, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/* slideshow */
+
+ul {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    list-style: none;
+    -webkit-perspective: 700;
+    perspective: 700;
+}
+
+li.raffle {
+    position: absolute;
+    transform-origin: 0 100%;
+}
+
+li.current {
+    transition: all 0.3s ease-out;
+    opacity: 1.0;
+}
+
+li.in {
+    opacity: 0.0;
+    transform: rotate3d(1, 0, 0, -90deg);
+}
+
+li.out {
+    transition: all 0.3s ease-out;
+    opacity: 0.0;
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+

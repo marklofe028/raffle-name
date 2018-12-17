@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raffle Draw</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/button-3d.css">
+    <link rel="stylesheet" href="css/font/css/all.min.css">
+    <!--<link rel="stylesheet" href="node_modules/jquery-slotmachine/styles/index.css">-->
+    <!--<link rel="stylesheet" href="node_modules/jquery-slotmachine/styles/style.css">-->
+    <!--<link rel="stylesheet" href="node_modules/jquery-slotmachine/dist/jquery.slotmachine.min.css">-->
+    <link rel="stylesheet" href="css/shuffler.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="main" class="container-fluid">
+    <div class="row">
+        <canvas id="canvas" style="z-index: -1; position: fixed"></canvas>
+    </div>
+    <div class="row justify-content-end">
+        <span id="winners" class="btn btn-lg float-right" data-toggle="modal" data-target="#winnersModal">
+            <i class="fas fa-trophy" style="color: #0c5460;"></i>
+        </span>
+        <span class="btn btn-lg float-right" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-bars" style="color: #0c5460;"></i>
+        </span>
+    </div>
+    <div id="mid-section" class="row justify-content-center align-items-center">
+        <div id="main-content" class="row col-lg-12">
+            <ul id='slideshow'></ul>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <button id="again" class="btn btn-success btn-lg btn3d">Shuffle</button>
+            <button id="stop-again" class="btn btn-danger btn-lg btn3d" disabled>Draw a Winner</button>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Data Input</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <textarea name="names" id="names" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="submit" class="btn btn-success btn-lg btn3d">Submit</button>
+                <button id="clear" class="btn btn-danger btn-lg btn3d">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="winnersModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Winners</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <ul id="winners-list"></ul>
+            </div>
+            <div class="modal-footer">
+                <button id="close" data-dismiss="modal" class="btn btn-danger btn-lg btn3d">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="node_modules/jquery-slotmachine/dist/slotmachine.min.js"></script>-->
+<!--<script src="node_modules/jquery-slotmachine/dist/jquery.slotmachine.min.js"></script>-->
+<script type="module" src="js/index.js"></script>
+<script type="module" src="js/confetti.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    background-color: ghostwhite;
+    background-repeat: no-repeat;
+    background-image: url("https://thumbs.dreamstime.com/z/christmas-fir-backgrounds-wooden-background-natural-pine-branches-decor-layout-site-design-tree-edge-105190131.jpg");
+    background-size: cover;
+}
+
+div#mid-section {
+    margin-top: 15%;
+}
+
+div#machine {
+    overflow: hidden;
+    height: 50px;
+}
+
+ul#slideshow li {
+    background-color: #F3E5A3;
+    width: 100%;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+}
+
+ul#slideshow li div {
+    background: #F3E5A3;
+}
+
+ul#winners-list li {
+    list-style-type: disc;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
